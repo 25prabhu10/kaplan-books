@@ -1,0 +1,61 @@
+{
+  "root": true,
+
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true,
+    "jest": true
+  },
+
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended"
+  ],
+
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+
+  "plugins": ["react", "@typescript-eslint", "import"],
+
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "parent", "index", "sibling"]
+      }
+    ],
+    "guard-for-in": "error",
+    "no-console": "warn",
+    "no-bitwise": "error",
+    "no-eval": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "spaced-comment": ["error", "always", { "block": { "balanced": true } }],
+    "dot-notation": "error",
+    "array-callback-return": "error"
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
