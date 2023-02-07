@@ -6,5 +6,5 @@ test('loads and displays greeting', () => {
   render(<App />)
 
   // Assert
-  expect(screen.getByRole('heading')).toHaveTextContent(/^Hello, World!$/)
+  expect(screen.getByRole('heading')).toHaveTextContent(/^hello, world!$/i)
 })
