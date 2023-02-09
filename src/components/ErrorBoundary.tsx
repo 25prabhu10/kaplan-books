@@ -17,6 +17,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // TODO: replace with logger
     console.error('Uncaught error:', error, errorInfo)
   }
 
