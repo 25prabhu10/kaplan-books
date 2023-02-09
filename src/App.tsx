@@ -1,5 +1,12 @@
+import Books from './pages/Books'
+import MainLayout from './pages/MainLayout'
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello, World!</h1>
+  return (
+    <MainLayout>
+      <Books />
+    </MainLayout>
+  )
 }
 
 export default App
